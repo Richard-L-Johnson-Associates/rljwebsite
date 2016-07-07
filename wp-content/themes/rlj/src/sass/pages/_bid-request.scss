@@ -1,0 +1,13 @@
+
+.form-item--delivery > label {
+  display: none;
+}
+
+.form-item--delivery .frm_description p {
+  margin-bottom: $base;
+
+  @include bp-min-width($large) {
+    @include font-size(20px);
+    @include line-height(24px);
+  }
+}

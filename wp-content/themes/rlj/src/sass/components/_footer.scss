@@ -1,0 +1,11 @@
+
+.footer {
+  padding: $base*1.5 2%;
+  background-color: #fff;
+}
+
+.footer p {
+  @include font-size(15px);
+  @include line-height(17px);
+  color: $grey;
+}

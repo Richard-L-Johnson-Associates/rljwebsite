@@ -1,0 +1,73 @@
+
+.home .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: none;
+  width: 100%;
+}
+
+.home .white-logo {
+  display: block;
+}
+
+.home .primary-logo {
+  display: none;
+}
+
+.home .main-nav a {
+  color: #fff;
+}
+
+.home-hero {
+  text-align: center;
+}
+
+.home-hero .hero-container {
+  padding-top: $base*19;
+  padding-bottom: $base*15;
+}
+
+.home-hero--title {
+  text-transform: uppercase;
+
+  @include bp-min-width($xlarge) {
+    @include font-size(100px);
+  }
+}
+
+.home-hero--title .bullet {
+  vertical-align: 10px;
+  font-size: .65em;
+}
+
+.home-hero--subtitle {
+  font-family: $family-sans-body;
+  font-style: italic;
+
+  @include bp-min-width($xlarge) {
+    @include font-size(35px);
+  }
+}
+
+.home-intro--content {
+  float: left;
+  width: calc(100% - 560px);
+}
+
+.home-intro--content p {
+  @include bp-min-width($large) {
+    @include font-size(30px);
+    @include line-height(37px);
+  }
+}
+
+.home-intro--cta {
+  @include bp-min-width($medium) {
+    float: left;
+    width: 560px;
+    text-align: right;
+  }
+}

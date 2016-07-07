@@ -1,0 +1,44 @@
+
+.cta-section {
+  @include cf;
+}
+
+.cta-section__red {
+  background: $red;
+}
+
+.cta-section .container {
+  @include bp-min-width($medium) {
+    padding-top: $base*4;
+    padding-bottom: $base*4;
+  }
+
+  @include bp-min-width($xxlarge) {
+    padding-top: $base*6;
+    padding-bottom: $base*6;
+  }
+}
+
+.cta-section--content {
+  float: left;
+  width: calc(100% - 560px);
+}
+
+.cta-section--content p {
+  @include bp-min-width($large) {
+    @include font-size(30px);
+    @include line-height(37px);
+  }
+}
+
+.cta-section__red p {
+  color: #fff;
+}
+
+.cta-section--button {
+  @include bp-min-width($medium) {
+    float: left;
+    width: 560px;
+    text-align: right;
+  }
+}

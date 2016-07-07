@@ -1,0 +1,67 @@
+
+.form-field--first-name,
+.form-field--city {
+  @include bp-min-width($large) {
+    padding-right: 20px;
+  }
+}
+
+.form-field--last-name,
+.form-field--state {
+  @include bp-min-width($large) {
+    padding-top: 47px;
+    padding-left: 20px;
+  }
+}
+
+.form-field--last-name label,
+.form-field--state label {
+  display: none;
+}
+
+.form-field--email,
+.form-field--subject {
+  @include bp-min-width($large) {
+    clear: left;
+  }
+}
+
+.contact-info {
+  background: $red;
+}
+
+.contact-info--col {
+  float: left;
+  width: 33.333%;
+  text-align: center;
+}
+
+.contact-info--icon,
+.contact-info--content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact-info--icon {
+  margin-right: 20px;
+}
+
+.contact-info--icon svg {
+  fill: #fff;
+  width: 90px;
+  height: 90px;
+}
+
+.contact-info--content {
+  text-align: left;
+  color: #fff;
+
+  @include bp-min-width($large) {
+    @include font-size(30px);
+    @include line-height(37px);
+  }
+}
+
+.contact-info--content a {
+  color: #fff;
+}

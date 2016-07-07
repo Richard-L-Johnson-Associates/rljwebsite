@@ -1,0 +1,16 @@
+
+.header {
+  @include cf;
+  position: relative;
+  padding: $base*1.5 2%;
+  background-color: #fff;
+}
+
+.white-logo {
+  display: none;
+}
+
+.header-logo {
+  float: left;
+  width: 300px;
+}

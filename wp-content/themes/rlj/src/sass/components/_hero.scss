@@ -1,0 +1,16 @@
+
+.hero {
+  position: relative;
+  background-color: $red;
+  color: #fff;
+}
+
+.hero-container {
+  padding: $base*10 5%;
+}
+
+.hero--title {
+  @include font-size(60px);
+  @include line-height(73px);
+  text-align: center;
+}

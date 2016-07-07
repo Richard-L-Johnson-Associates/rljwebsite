@@ -1,0 +1,61 @@
+
+.project-grid {
+  @include cf;
+}
+
+.project-grid--item {
+  position: relative;
+  padding-bottom: 28%;
+  background-size: cover;
+
+  @include bp-min-width($medium) {
+    float: left;
+    width: 33.333%;
+  }
+}
+
+.project-grid--link {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  text-transform: uppercase;
+  background: rgba(#000, .75);
+
+  @include bp-min-width($xlarge) {
+    padding: 30px 36px;
+  }
+}
+
+.project-grid--link:hover {
+  background: rgba($dk-red, .75);
+}
+
+.project-grid--title {
+  margin-bottom: 12px;
+
+  @include bp-min-width($large) {
+    @include font-size(35px);
+    @include line-height(43px);
+  }
+}
+
+.project-grid--title:after {
+  content: '';
+  display: block;
+  width: 160px;
+  height: 3px;
+  margin: $base 0;
+  background: #fff;
+}
+
+.project-grid--view-project {
+  text-transform: uppercase;
+
+  @include bp-min-width($large) {
+    @include font-size(20px);
+  }
+}

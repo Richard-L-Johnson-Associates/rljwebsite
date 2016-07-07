@@ -1,0 +1,67 @@
+<?php get_header(); ?>
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1 class="hero--title"><?php the_field('projects_hero_title'); ?></h1>
+    </div>
+  </section>
+
+  <main class="main" role="main">
+
+    <section class="projects">
+
+      <div class="tabs project-filters">
+      <?php
+      $terms = get_terms( 'project-category' );
+      if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+        foreach ( $terms as $term ) {
+          echo '<a href="#" class="tabs--item" data-category="' . strtolower($term->name) . '">' . $term->name . '</a>';
+        }
+      }
+      ?>
+      </div>
+
+      <?php
+        $args = array( 'post_type' => 'projects', 'posts_per_page' => -1 );
+        $myposts = get_posts( $args );
+      ?>
+      <div class="project-grid">
+        <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+        <div class="project-grid--item" data-categories="<?php rlj_project_categories(); ?>">
+          <a href="<?php the_permalink(); ?>" class="project-grid--link">
+            <div class="project-grid--thumb">
+              <?php
+                $image = get_field('services_main_image');
+                $size = 'project-thumb';
+                $services_image = $image['sizes'][ $size ];
+              ?>
+              <img src="<?php echo $services_image; ?>">
+            </div>
+            <h3 class="project-grid--title"><?php the_title(); ?></h3>
+            <p class="project-grid--view-project">View Project </p>
+          </a>
+        </div>
+        <?php endforeach; ?>
+      </div>
+      <?php wp_reset_postdata();?>
+
+    </section>
+
+    <section class="cta-section cta-section__red">
+      <div class="container">
+        <div class="cta-section--content">
+          <p><?php the_field('projects_cta_content'); ?></p>
+        </div>
+        <div class="cta-section--button">
+          <p><a href="<?php the_field('projects_cta_button_link'); ?>" class="btn btn__white-border"><?php the_field('projects_cta_button_label'); ?></a></p>
+        </div>
+      </div>
+    </section>
+
+	</main>
+
+<?php endwhile; endif; ?>
+
+<?php get_footer(); ?>

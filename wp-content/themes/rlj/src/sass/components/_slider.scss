@@ -1,0 +1,35 @@
+
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+
+.project-slider--icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -28px;
+  fill: #fff;
+  width: 30px;
+  height: 56px;
+}
+
+.icon-prev {
+  left: 30px;
+}
+
+.icon-next {
+  right: 30px;
+}

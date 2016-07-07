@@ -1,0 +1,81 @@
+
+.team-grid--item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 20%;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.team-grid--item .red-overlay {
+  @include global-transition(.15s);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.team-grid--member-info {
+  @include global-transition(.15s);
+  @include absolute-center;
+  @include font-size(15px);
+  @include line-height(19px);
+  opacity: 0;
+  color: #fff;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.team-grid--item:hover .team-grid--member-info,
+.team-grid--item:hover .red-overlay {
+  opacity: 1;
+}
+
+.member-profile-image {
+  width: 30%;
+}
+
+.member-profile-image img {
+  border-radius: 50%;
+}
+
+.member-info {
+  width: 70%;
+  padding-left: 6%;
+  vertical-align: middle;
+}
+
+.member-name {
+  @include bp-min-width($large) {
+    @include font-size(40px);
+    margin-bottom: 4px;
+    color: $red;
+    text-transform: uppercase;
+  }
+}
+
+.member-title {
+  @include bp-min-width($large) {
+    @include font-size(35px);
+    margin-bottom: $base;
+    color: $red;
+  }
+}
+
+.member-bio p {
+  font-family: $family-sans-body;
+
+  @include bp-min-width($large) {
+    @include font-size(30px);
+    @include line-height(38px);
+  }
+}
+
+.member-bio p:not(:last-child) {
+  margin-bottom: 12px;
+
+  @include bp-min-width($large) {
+    margin-bottom: $base;
+  }
+}
+
+

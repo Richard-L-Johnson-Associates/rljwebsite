@@ -1,0 +1,53 @@
+
+body {
+  background: $lt-grey;
+}
+
+.site-container {
+  @include cf;
+
+  @include bp-min-width($xxlarge) {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+.main {
+  background-color: #fff;
+}
+
+.container {
+  @include cf;
+  padding: $base 20px;
+
+  @include bp-min-width($medium) {
+    padding: $base*3 40px;
+  }
+
+  @include bp-min-width($large) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.no-scroll {
+  position: fixed;
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}
+
+.mobile-visible {
+  visibility: visible;
+}
+
+.mobile-hidden {
+  visibility: hidden;
+}

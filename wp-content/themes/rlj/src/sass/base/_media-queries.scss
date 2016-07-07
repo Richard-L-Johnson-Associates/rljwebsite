@@ -1,0 +1,33 @@
+
+$xxlarge: 1600px;
+$xlarge:  1200px;
+$large:   1000px;
+$medium:  700px;
+$small:   600px;
+$xsmall:  500px;
+$tiny:    400px;
+
+@function calculateEm($point) {
+  $emPoint: $point / 16px;
+  @return $emPoint * 1em;
+}
+
+@mixin bp-max-width($point) {
+	@media (max-width: (calculateEm($point) - 0.063em)) { @content; }
+}
+
+@mixin bp-max-height($point) {
+	@media (max-height: ((calculateEm($point)) - 0.063em)) { @content; }
+}
+
+@mixin bp-min-width($point) {
+	@media (min-width: calculateEm($point)) { @content; }
+}
+
+@mixin bp-min-height($point) {
+	@media (min-width: calculateEm($point)) { @content; }
+}
+
+@mixin bp-min-max($min, $max) {
+	@media (min-width: calculateEm($min)) and (max-width: (calculateEm($max) - 0.063em)) { @content; }
+}
