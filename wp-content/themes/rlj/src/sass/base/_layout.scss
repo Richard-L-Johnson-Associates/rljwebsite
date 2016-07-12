@@ -29,15 +29,16 @@ body:not(.home) .site-container {
 
 .container {
   @include cf;
-  padding: $base 20px;
+  padding: $base*1.5 20px;
 
   @include bp-min-width($medium) {
-    padding: $base*3 40px;
-  }
-
-  @include bp-min-width($large) {
     padding-left: 5%;
     padding-right: 5%;
+  }
+
+  @include bp-min-width($xxlarge) {
+    padding-top: $base*3;
+    padding-bottom: $base*3;
   }
 }
 

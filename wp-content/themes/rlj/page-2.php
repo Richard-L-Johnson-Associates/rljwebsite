@@ -7,7 +7,7 @@
   ?>
   <section class="hero home-hero" style="background-image: url(<?php echo $bg_image[0]; ?>);">
     <div class="hero-container">
-      <h1 class="hero--title home-hero--title"><?php the_field('home_hero_title'); ?></h1>
+      <h1 class="home-hero--title"><?php the_field('home_hero_title'); ?></h1>
       <h2 class="home-hero--subtitle"><?php the_field('home_hero_subtitle'); ?></h2>
     </div>
   </section>

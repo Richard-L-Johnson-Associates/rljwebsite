@@ -30,13 +30,15 @@ em {
 
 .section-title {
   @include font-size(25px);
-  margin-bottom: 12px;
+  margin-bottom: $base;
   color: $red;
   text-transform: uppercase;
 
+  @include bp-max-width($medium) {
+    text-align: center;
+  }
   @include bp-min-width($medium) {
     @include font-size(30px);
-    margin-bottom: $base;
   }
 
   @include bp-min-width($xxlarge) {

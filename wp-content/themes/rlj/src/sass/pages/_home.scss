@@ -71,18 +71,28 @@
 }
 
 .home-hero .hero-container {
-  padding-top: $base*19;
-  padding-bottom: $base*15;
+  padding-top: $base*4;
+
+  @include bp-min-width($medium) {
+    padding-top: $base*14;
+    padding-bottom: $base*12;
+  }
+
+  @include bp-min-width($xxlarge) {
+    padding-top: $base*19;
+    padding-bottom: $base*15;
+  }
 }
 
 .home-hero--title {
   @include font-size(25px);
   @inlcude line-height(30px);
+  margin-bottom: 6px;
   text-transform: uppercase;
 
   @include bp-min-width($medium) {
     @include font-size(60px);
-    @inlcude line-height(72px);
+    @inlcude line-height(80px);
     margin-bottom: 18px;
   }
 
@@ -94,8 +104,12 @@
 }
 
 .home-hero--title .bullet {
-  vertical-align: 10px;
+  vertical-align: 2px;
   font-size: .65em;
+
+  @include bp-min-width($medium) {
+    vertical-align: 10px;
+  }
 }
 
 .home-hero--subtitle {
@@ -115,9 +129,25 @@
   }
 }
 
+.home-intro {
+  @include bp-max-width($large) {
+    text-align: center;
+  }
+}
+
 .home-intro--content {
-  float: left;
-  width: calc(100% - 560px);
+  @include bp-max-width($large) {
+    margin-bottom: $base;
+  }
+
+  @include bp-min-width($large) {
+    float: left;
+    width: calc(100% - 400px);
+  }
+
+  @include bp-min-width($xxlarge) {
+    width: calc(100% - 560px);
+  }
 }
 
 .home-intro--content p {
@@ -131,9 +161,13 @@
 }
 
 .home-intro--cta {
-  @include bp-min-width($medium) {
+  @include bp-min-width($large) {
     float: left;
-    width: 560px;
+    width: 400px;
     text-align: right;
+  }
+
+  @include bp-min-width($xxlarge) {
+    width: 560px;
   }
 }

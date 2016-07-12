@@ -36,11 +36,13 @@
                 $size = 'team-profile-image';
                 $thumb = $image['sizes'][ $size ];
               ?>
-              <img src="<?php echo $thumb; ?>">
+              <div class="team-grid--thumb">
+                <img src="<?php echo $thumb; ?>">
+              </div>
               <div class="red-overlay"></div>
               <div class="team-grid--member-info">
-                <p><?php the_title(); ?></p>
-                <p><?php the_field('team_member_title'); ?></p>
+                <p class="team-grid--member-name"><?php the_title(); ?></p>
+                <p class="team-grid--member-title"><?php the_field('team_member_title'); ?></p>
               </div>
             </a>
           <?php endforeach;

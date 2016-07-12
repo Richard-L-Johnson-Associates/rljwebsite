@@ -25,7 +25,7 @@ $(function(){
     mobileBtn.on('click', function(e){
       e.preventDefault();
       body.toggleClass('js-no-scroll');
-      mobileBtn.toggle('js-is-active');
+      mobileBtn.toggleClass('js-is-active');
       mainMenu.toggleClass('js-is-visible');
     });
   };
@@ -77,7 +77,10 @@ $(function(){
     $('.animate').addClass('fade-in');
   });
 
-  homeHeaderBackground();
+  if($(window).width() > 740) {
+    homeHeaderBackground();
+  }
+
   mobileNav();
   servicesTabs();
   projectsFilters();

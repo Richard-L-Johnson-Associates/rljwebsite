@@ -176,7 +176,10 @@ $(function(){
     $('.animate').addClass('fade-in');
   });
 
-  homeHeaderBackground();
+  if($(window).width() > 740) {
+    homeHeaderBackground();
+  }
+
   mobileNav();
   servicesTabs();
   projectsFilters();

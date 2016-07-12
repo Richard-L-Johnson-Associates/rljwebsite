@@ -2,10 +2,32 @@
 .team-grid--item {
   position: relative;
   display: block;
-  overflow: hidden;
-  width: 20%;
-  border-radius: 50%;
   text-align: center;
+
+  @include bp-min-width($medium) {
+    width: 33.333%;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  @include bp-min-width($xlarge) {
+    width: 20%;
+  }
+}
+
+.team-grid--item:not(:last-child) {
+  @include bp-max-width($medium) {
+    margin-bottom: $base*1.5;
+  }
+}
+
+.team-grid--thumb {
+  @include bp-max-width($medium) {
+    overflow: hidden;
+    max-width: 320px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+  }
 }
 
 .team-grid--item .red-overlay {
@@ -15,20 +37,33 @@
 }
 
 .team-grid--member-info {
-  @include global-transition(.15s);
-  @include absolute-center;
-  @include font-size(15px);
-  @include line-height(19px);
-  opacity: 0;
-  color: #fff;
-  width: 100%;
-  padding: 0 20px;
+  color: #000;
+
+  @include bp-min-width($medium) {
+    @include global-transition(.15s);
+    @include absolute-center;
+    @include font-size(15px);
+    @include line-height(19px);
+    opacity: 0;
+    color: #fff;
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .team-grid--item:hover .team-grid--member-info,
 .team-grid--item:hover .red-overlay {
   opacity: 1;
 }
+
+.team-grid--member-name {
+  @include font-size(18px);
+}
+
+.team-grid--member-title {
+  @include font-size(13px);
+}
+
 
 .member-profile-image {
   width: 30%;
@@ -77,5 +112,4 @@
     margin-bottom: $base;
   }
 }
-
 

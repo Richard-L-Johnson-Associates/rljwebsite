@@ -5,12 +5,17 @@
 
 .project-grid--item {
   position: relative;
-  padding-bottom: 28%;
+  padding-bottom: 75%;
   background-size: cover;
+
+  @include bp-min-width($small) {
+    padding-bottom: 50%;
+  }
 
   @include bp-min-width($medium) {
     float: left;
     width: 33.333%;
+    padding-bottom: 28%;
   }
 }
 
@@ -21,6 +26,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 24px;
   color: #fff;
   text-transform: uppercase;
   background: rgba(#000, .75);
@@ -35,9 +41,11 @@
 }
 
 .project-grid--title {
+  @include font-size(20px);
+  @include line-height(24px);
   margin-bottom: 12px;
 
-  @include bp-min-width($large) {
+  @include bp-min-width($xxlarge) {
     @include font-size(35px);
     @include line-height(43px);
   }

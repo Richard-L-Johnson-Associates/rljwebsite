@@ -20,8 +20,18 @@
 }
 
 .cta-section--content {
-  float: left;
-  width: calc(100% - 560px);
+  @include bp-max-width($large) {
+    margin-bottom: $base;
+  }
+
+  @include bp-min-width($large) {
+    float: left;
+    width: calc(100% - 400px);
+  }
+
+  @include bp-min-width($xxlarge) {
+    width: calc(100% - 560px);
+  }
 }
 
 .cta-section--content p {
@@ -39,9 +49,13 @@
 }
 
 .cta-section--button {
-  @include bp-min-width($medium) {
+  @include bp-min-width($large) {
     float: left;
-    width: 560px;
+    width: 400px;
     text-align: right;
+  }
+
+  @include bp-min-width($xxlarge) {
+    width: 560px;
   }
 }

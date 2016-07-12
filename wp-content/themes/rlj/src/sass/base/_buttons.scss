@@ -24,7 +24,7 @@ a {
   text-transform: uppercase;
   text-align: center;
 
-  @include bp-min-width($medium) {
+  @include bp-min-width($large) {
     @include font-size(22px);
     min-width: 324px;
     padding: 24px 32px;
