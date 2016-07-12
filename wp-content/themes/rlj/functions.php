@@ -286,7 +286,7 @@
   add_image_size( 'team-profile-image', 500, 500, true );
   add_image_size( 'project-thumb', 640, 542, true );
 
-  add_image_size( 'primary-hero', 1600, 760, true );
+  add_image_size( 'primary-hero', 1920, 1050, true );
   add_image_size( 'secondary-hero', 1600, 450, true );
 
 

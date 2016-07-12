@@ -48,12 +48,22 @@
   }
 }
 
-.home .js-bg-white a {
+.home .js-bg-white a,
+.home .js-is-visible a {
   color: #000;
 
   &:hover {
     color: $red;
   }
+}
+
+.home .header .btn-mobile--bar {
+  background: #fff;
+}
+
+.home .js-bg-white .btn-mobile--bar,
+.home .js-is-active .btn-mobile--bar {
+  background: #000;
 }
 
 .home-hero {

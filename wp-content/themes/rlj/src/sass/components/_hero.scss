@@ -2,10 +2,26 @@
 .hero {
   position: relative;
   background-color: $red;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
 }
 
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba($dk-red, .75);
+}
+
 .hero-container {
+  position: relative;
+  z-index: 5;
   padding: $base*3 20px;
 
   @include bp-min-width($medium) {

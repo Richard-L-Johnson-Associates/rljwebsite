@@ -1,14 +1,19 @@
 
 .main-nav {
   @include cf;
+  float: right;
 
-  @include bp-min-width($small) {
+  @include bp-max-width($large) {
+    padding-top: 4px;
+  }
+
+  @include bp-min-width($large) {
     @include vertical-center(absolute);
     right: 2%;
   }
 }
 
-.menu-menu-1-container {
+.menu-main-menu-container {
   @include bp-max-width($large) {
     transition: opacity 0.15s ease-in-out;
     position: fixed;
@@ -20,40 +25,37 @@
     width: 100%;
     height: 0;
     opacity: 0;
-    background: $red;
+    background: #fff;
   }
 }
 
-.nav-visible .menu-menu-1-container {
+.menu-main-menu-container.js-is-visible {
   @include bp-max-width($large) {
     height: 100%;
     opacity: 1;
   }
 }
 
-.nav-hidden .menu-menu-1-container {
-  @include bp-max-width($large) {
-    height: 100%;
-    opacity: 0;
-  }
-}
-
 .main-nav .menu {
   @include bp-max-width($large) {
     @include fixed-center;
-    width: 100%;
+    width: 300px;
     height: 0;
     overflow: scroll;
   }
 }
 
-.nav-visible .main-nav .menu {
+.main-nav .js-is-visible .menu {
   @include bp-max-width($large) {
     height: auto;
   }
 }
 
 .main-nav li {
+  @include bp-max-width($large) {
+    margin-bottom: $base;
+  }
+
   @include bp-min-width($large) {
     float: left;
     margin-left: 24px;
@@ -65,6 +67,14 @@
   display: block;
   color: #000;
   text-transform: uppercase;
+
+  @include bp-min-max($large, $xxlarge) {
+    @include font-size(15px);
+  }
+
+  @include bp-min-width($xxlarge) {
+    @include font-size(20px);
+  }
 }
 
 .main-nav li a:hover {
@@ -82,69 +92,36 @@
 }
 
 .main-nav .current-menu-item:before {
-  @include down-triangle(10px, $red);
-  @include horizontal-center(absolute);
-  top: -43px;
-}
-
-.main-nav--close-menu {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 30;
-}
-
-.nav-visible .main-nav--close-menu {
-  display: block;
-}
-
-.main-nav--close-menu .icon-close {
-  width: 20px;
-  height: 20px;
-  fill: #fff;
+  @include bp-min-width($large) {
+    @include down-triangle(10px, $red);
+    @include horizontal-center(absolute);
+    top: -43px;
+  }
 }
 
 
 /** Mobile Menu Button **/
 
 .btn-mobile {
+  position: relative;
+  width: 24px;
+  height: 18px;
+  z-index: 30;
   display: inline-block;
-  height: 36px;
-  padding-top: 5px;
-
-  @include bp-max-width($small) {
-    margin-right: 20px;
-  }
 
   @include bp-min-width($large) {
     display: none;
   }
 }
 
-.btn-mobile--label {
-  @include font-size(15px);
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 6px;
-  text-transform: uppercase;
-}
-
-.btn-mobile--close-icon {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 16px;
-  background: none;
-}
-
 .btn-mobile--bar {
   @include global-transition(0.1s);
   display: block;
-  width: 20px;
+  width: 24px;
   height: 3px;
   margin-bottom: 3px;
+  background: #000;
+  border-radius: 6px;
 }
 
 .btn-mobile--bar:nth-child(1) {
@@ -159,15 +136,10 @@
   opacity: 1;
 }
 
-.btn-mobile.is-active .icon-menu {
-  height: 9px;
-}
-
-.btn-mobile.is-active .bar {
+.js-is-active .btn-mobile--bar {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
-  background-color: #fff;
 
   &:nth-child(1) {
     transform: rotate(45deg);

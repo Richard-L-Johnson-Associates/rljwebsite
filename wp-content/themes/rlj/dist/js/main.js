@@ -116,32 +116,16 @@ $(function(){
   };
 
   mobileNav = function() {
-    var siteHeader = $('.site-header');
+    var siteHeader = $('.header');
     var mobileBtn = $('.btn-mobile');
-    var mainMenu = $('.menu-menu-1-container');
-    var closeMenu = $('.main-nav--close-menu');
+    var mainMenu = $('.menu-main-menu-container');
     var body = $('body');
 
     mobileBtn.on('click', function(e){
       e.preventDefault();
-      if ((siteHeader).hasClass('nav-visible')) {
-        body.removeClass('no-scroll');
-        siteHeader.removeClass('nav-visible').addClass('nav-hidden');
-
-        setTimeout(function() {
-          siteHeader.removeClass('nav-hidden');
-        });
-
-      } else {
-        siteHeader.addClass('nav-visible');
-        body.addClass('no-scroll');
-      }
-    });
-
-    closeMenu.on('click', function(e){
-      e.preventDefault();
-      body.removeClass('no-scroll');
-      siteHeader.removeClass('nav-visible');
+      body.toggleClass('js-no-scroll');
+      mobileBtn.toggleClass('js-is-active');
+      mainMenu.toggleClass('js-is-visible');
     });
   };
 

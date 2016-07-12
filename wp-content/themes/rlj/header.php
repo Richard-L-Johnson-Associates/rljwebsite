@@ -29,13 +29,10 @@
         </div>
     		<nav class="main-nav">
           <a href="" class="btn-mobile">
-            <span class="btn-mobile--close-icon">
-              <span class="btn-mobile--bar"></span>
-              <span class="btn-mobile--bar"></span>
-              <span class="btn-mobile--bar"></span>
-            </span>
+            <span class="btn-mobile--bar"></span>
+            <span class="btn-mobile--bar"></span>
+            <span class="btn-mobile--bar"></span>
           </a>
     			<?php wp_nav_menu( array('menu'=>'2') ); ?>
     		</nav>
   		</header>
-

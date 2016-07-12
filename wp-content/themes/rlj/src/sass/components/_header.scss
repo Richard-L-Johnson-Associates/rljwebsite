@@ -2,7 +2,7 @@
 .header {
   @include cf;
   position: relative;
-  padding: $base*1.5 2%;
+  padding: 12px 20px;
   background-color: #fff;
 
   @include bp-min-width($medium) {
@@ -11,18 +11,30 @@
     width: 100%;
     background: #fff;
     z-index: 10;
+    padding: $base 2%;
   }
-}
 
-.white-logo {
-  opacity: 0;
+  @include bp-min-width($xxlarge) {
+    padding-top: $base*1.5;
+    padding-bottom: $base*1.5;
+  }
 }
 
 .header-logo {
   position: relative;
   float: left;
-  width: 300px;
-  height: 38px;
+  width: 200px;
+  height: 26px;
+
+  @include bp-min-width($medium) {
+    width: 240px;
+    height: 30px;
+  }
+
+  @include bp-min-width($xxlarge) {
+    width: 300px;
+    height: 38px;
+  }
 }
 
 .header-logo img {
@@ -31,3 +43,8 @@
   left: 0;
   width: 100%;
 }
+
+.white-logo {
+  opacity: 0;
+}
+

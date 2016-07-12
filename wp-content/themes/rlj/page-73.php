@@ -2,7 +2,10 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <section class="hero hero-bid-request">
+  <?php
+    $bg_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'primary-hero' );
+  ?>
+  <section class="hero" style="background-image: url(<?php echo $bg_image[0]; ?>);">
     <div class="hero-container">
       <h1 class="hero--title"><?php the_title(); ?></h1>
     </div>
