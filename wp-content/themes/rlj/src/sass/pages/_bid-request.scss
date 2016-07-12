@@ -1,9 +1,9 @@
 
-.form-item--delivery > label {
+.page-id-73 .form-item--delivery > label {
   display: none;
 }
 
-.form-item--delivery .frm_description p {
+.page-id-73 .form-item--delivery .frm_description p {
   margin-bottom: $base;
 
   @include bp-min-width($large) {
@@ -11,3 +11,39 @@
     @include line-height(24px);
   }
 }
+
+.page-id-73 .form-item--company:before {
+  @extend .section-title;
+  display: block;
+  content: 'Contact Details';
+  padding-top: $base;
+  margin-bottom: $base*1.5;
+  line-height: 1;
+}
+
+.page-id-73 .form-item--city {
+  @include bp-min-width($large) {
+    padding-right: 20px;
+  }
+}
+
+.page-id-73 .form-item--state {
+  @include bp-min-width($large) {
+    padding-left: 20px;
+  }
+}
+
+.page-id-73 .form-item--city label,
+.page-id-73 .form-item--state label {
+  display: none;
+}
+
+.page-id-73 .form-item--confirm label {
+  @include font-size(20px);
+  color: $grey;
+}
+
+.page-id-73 .form-item--confirm .frm_checkbox label {
+  color: $red;
+}
+

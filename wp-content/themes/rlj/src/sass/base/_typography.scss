@@ -29,28 +29,33 @@ em {
 }
 
 .section-title {
-  @include font-size(24px);
+  @include font-size(25px);
   margin-bottom: 12px;
   color: $red;
   text-transform: uppercase;
 
   @include bp-min-width($medium) {
-    @include font-size(50px);
+    @include font-size(30px);
     margin-bottom: $base;
+  }
+
+  @include bp-min-width($xxlarge) {
+    @include font-size(50px);
   }
 }
 
 .body-content p,
 .body-content ul,
 .body-content ol {
+  @include font-size(18px);
+  @include line-height(24px);
   margin-bottom: 1em;
   font-family: $family-sans-body;
 
-  @include bp-min-width($large) {
+  @include bp-min-width($xxlarge) {
     @include font-size(30px);
     @include line-height(38px);
   }
-
 
   &:last-child {
     margin-bottom: 0;

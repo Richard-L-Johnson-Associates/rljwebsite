@@ -1,5 +1,21 @@
 $(function(){
 
+  var homeHeaderBackground = function() {
+    var homeHeader = $('.home .header');
+
+    $(window).scroll(function() {
+      var scrollPosition = $(window).scrollTop();
+
+      if (scrollPosition > 1) {
+        homeHeader.addClass('js-bg-white');
+      }
+
+      if (scrollPosition == 0) {
+        homeHeader.removeClass('js-bg-white');
+      }
+    });
+  };
+
   mobileNav = function() {
     var siteHeader = $('.site-header');
     var mobileBtn = $('.btn-mobile');
@@ -28,7 +44,7 @@ $(function(){
       body.removeClass('no-scroll');
       siteHeader.removeClass('nav-visible');
     });
-  }
+  };
 
   servicesTabs = function() {
     var tabItem = $('.services-tabs--item');
@@ -48,7 +64,7 @@ $(function(){
         $(".services-item:nth-child("+nthChild+")").addClass('is-active');
       }
     });
-  }
+  };
 
   projectsFilters = function() {
     var filter = $('.project-filters a');
@@ -57,17 +73,15 @@ $(function(){
 
     filter.on('click', function(e) {
       e.preventDefault();
+
       var fitlerCategory = $(this).data('category');
 
-      // projectGridItem.hide().filter('[data-categories=' . fitlerCategory . ']').show();
-
-      console.log(fitlerCategory);
+      filter.removeClass('is-active');
+      $(this).addClass('is-active');
+      projectGridItem.hide();
+      $('.project-grid--item[data-categories=' + fitlerCategory + ']').show();
     });
-  }
-
-  $(window).on('load', function() {
-    $('.animate').addClass('fade-in');
-  });
+  };
 
   $('.project-slider').bxSlider({
     nextText: '<svg class="icon-prev project-slider--icon"><use xlink:href="#icon-prev"></use></svg>',
@@ -75,8 +89,13 @@ $(function(){
     pager: false
   });
 
+  $(window).on('load', function() {
+    $('.animate').addClass('fade-in');
+  });
+
+  homeHeaderBackground();
   mobileNav();
   servicesTabs();
-  // projectsFilters();
+  projectsFilters();
 
 });

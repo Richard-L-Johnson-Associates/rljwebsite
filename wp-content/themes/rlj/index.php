@@ -3,7 +3,7 @@
 <section class="hero home-hero">
   <div class="hero-container">
     <h1 class="hero--title home-hero--title">Dream <span class="bullet">&bullet;</span> Design <span class="bullet">&bullet;</span> Deliver</h1>
-    <h2 class="home-hero--subtitle">Architecture for your educational, municipal, and commercial needs.</h2>
+    <h2 class="home-hero--subtitle"><?php the_field('home_hero_subtitle'); ?></h2>
   </div>
 </section>
 

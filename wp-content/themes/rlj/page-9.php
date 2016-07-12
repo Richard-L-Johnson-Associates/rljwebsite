@@ -29,16 +29,15 @@
       ?>
       <div class="project-grid">
         <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-        <div class="project-grid--item" data-categories="<?php rlj_project_categories(); ?>">
+        <?php
+          $rows = get_field('project_images');
+          $first_row = $rows[0];
+          $image = $first_row['project_image'];
+          $image_url = $image['sizes']['project-thumb'];
+        ?>
+        <div class="project-grid--item" data-categories="<?php rlj_project_categories(); ?>" style="background-image: url('<?php echo $image_url; ?>');">
           <a href="<?php the_permalink(); ?>" class="project-grid--link">
-            <div class="project-grid--thumb">
-              <?php
-                $image = get_field('services_main_image');
-                $size = 'project-thumb';
-                $services_image = $image['sizes'][ $size ];
-              ?>
-              <img src="<?php echo $services_image; ?>">
-            </div>
+            <div class="project-grid--overlay"></div>
             <h3 class="project-grid--title"><?php the_title(); ?></h3>
             <p class="project-grid--view-project">View Project </p>
           </a>

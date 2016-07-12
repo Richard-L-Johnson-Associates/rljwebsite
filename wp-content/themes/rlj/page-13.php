@@ -2,7 +2,7 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <section class="hero">
+  <section class="hero hero-contact">
     <div class="hero-container">
       <h1 class="hero--title"><?php the_field('contact_hero_title'); ?></h1>
     </div>

@@ -1,0 +1,65 @@
+
+.contact-info {
+  background: $red;
+}
+
+.contact-info--col {
+  text-align: center;
+
+  @include bp-max-width($medium) {
+    margin-bottom: $base;
+  }
+
+  @include bp-min-width($medium) {
+    float: left;
+    width: 33.333%;
+  }
+}
+
+.contact-info--icon,
+.contact-info--content {
+  @include bp-min-width($large) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.contact-info--icon {
+  @include bp-max-width($large) {
+    margin-bottom: 12px;
+  }
+
+  @include bp-min-width($large) {
+    margin-right: 20px;
+  }
+}
+
+.contact-info--icon svg {
+  fill: #fff;
+  width: 60px;
+  height: 60px;
+
+  @include bp-min-width($large) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.contact-info--content {
+  @include font-size(18px);
+  @include line-height(24px);
+  color: #fff;
+
+  @include bp-min-width($large) {
+    text-align: left;
+  }
+
+  @include bp-min-width($xxlarge) {
+    @include font-size(30px);
+    @include line-height(38px);
+  }
+}
+
+.contact-info--content a {
+  color: #fff;
+}

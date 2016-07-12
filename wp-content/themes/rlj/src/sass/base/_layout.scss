@@ -13,6 +13,12 @@ body {
   }
 }
 
+.page .site-container {
+  @include bp-min-width($medium) {
+    padding-top: 110px;
+  }
+}
+
 .main {
   background-color: #fff;
 }

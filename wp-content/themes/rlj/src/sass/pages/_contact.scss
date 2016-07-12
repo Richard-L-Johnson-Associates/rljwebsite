@@ -1,67 +1,45 @@
 
-.form-field--first-name,
-.form-field--city {
+.page-id-13 .frm_forms {
+  padding-top: $base;
+
   @include bp-min-width($large) {
+    padding-top: $base*2;
+  }
+}
+
+.page-id-13 .form-item--first-name,
+.page-id-13 .form-item--city {
+  @include bp-min-width($medium) {
+    padding-right: 10px;
+  }
+
+  @include bp-min-width($xxlarge) {
     padding-right: 20px;
   }
 }
 
-.form-field--last-name,
-.form-field--state {
-  @include bp-min-width($large) {
-    padding-top: 47px;
+.page-id-13 .form-item--last-name,
+.page-id-13 .form-item--state {
+  @include bp-min-width($medium) {
+    padding-top: 34px;
+    padding-left: 10px;
+  }
+
+  @include bp-min-width($xxlarge) {
+    padding-top: 59px;
     padding-left: 20px;
   }
 }
 
-.form-field--last-name label,
-.form-field--state label {
+.page-id-13 .form-item--last-name label,
+.page-id-13 .form-item--state label {
   display: none;
 }
 
-.form-field--email,
-.form-field--subject {
-  @include bp-min-width($large) {
+.page-id-13 .form-item--email,
+.page-id-13 .form-item--subject {
+  @include bp-min-width($medium) {
     clear: left;
   }
 }
 
-.contact-info {
-  background: $red;
-}
-
-.contact-info--col {
-  float: left;
-  width: 33.333%;
-  text-align: center;
-}
-
-.contact-info--icon,
-.contact-info--content {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.contact-info--icon {
-  margin-right: 20px;
-}
-
-.contact-info--icon svg {
-  fill: #fff;
-  width: 90px;
-  height: 90px;
-}
-
-.contact-info--content {
-  text-align: left;
-  color: #fff;
-
-  @include bp-min-width($large) {
-    @include font-size(30px);
-    @include line-height(37px);
-  }
-}
-
-.contact-info--content a {
-  color: #fff;
-}

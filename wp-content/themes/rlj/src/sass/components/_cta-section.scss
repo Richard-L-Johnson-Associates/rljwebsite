@@ -25,9 +25,12 @@
 }
 
 .cta-section--content p {
-  @include bp-min-width($large) {
+  @include font-size(18px);
+  @include line-height(24px);
+
+  @include bp-min-width($xxlarge) {
     @include font-size(30px);
-    @include line-height(37px);
+    @include line-height(38px);
   }
 }
 
