@@ -5,10 +5,15 @@
 }
 
 .tabs--item {
-  @include font-size(20px);
+  @include font-size(16px);
+  display: inline-block;
   margin: 0 20px;
   color: #000;
   text-transform: uppercase;
+
+  @include bp-min-width($xlarge) {
+    @include font-size(20px);
+  }
 }
 
 .tabs--item.is-active {

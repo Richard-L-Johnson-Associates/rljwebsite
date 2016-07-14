@@ -1,6 +1,12 @@
 
 .services-item {
-  display: none;
+  @include bp-max-width($small) {
+    border-bottom: 1px solid $lt-grey;
+  }
+
+  @include bp-min-width($small) {
+    display: none;
+  }
 }
 
 .services-item.is-active {
@@ -9,4 +15,29 @@
 
 .services-hero img {
   width: 100%;
+}
+
+.services-tabs {
+  @include bp-max-width($small) {
+    display: none;
+  }
+}
+
+.sevices-mobile-toggle {
+  display: block;
+  padding: 20px;
+  color: #000;
+  text-transform: uppercase;
+
+  @include bp-min-width($small) {
+    display: none;
+  }
+}
+
+.services-mobile-container {
+  display: none;
+
+  @include bp-min-width($small) {
+    display: block !important;
+  }
 }

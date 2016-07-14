@@ -227,7 +227,7 @@ textarea {
   }
 }
 
-.frm_blank_field input,
+.frm_blank_field input:not([type="submit"]):not([type="checkbox"]),
 .frm_blank_field textarea {
   border: 1px solid $red;
 }

@@ -113,7 +113,7 @@ $(function(){
         homeHeader.removeClass('js-bg-white');
       }
     });
-  };
+  }
 
   mobileNav = function() {
     var siteHeader = $('.header');
@@ -127,11 +127,13 @@ $(function(){
       mobileBtn.toggleClass('js-is-active');
       mainMenu.toggleClass('js-is-visible');
     });
-  };
+  }
 
   servicesTabs = function() {
     var tabItem = $('.services-tabs--item');
     var servicesItem = $('.services-item');
+    var mobileToggle = $('.sevices-mobile-toggle');
+    var mobileContainer = $('.services-mobile-container');
 
     tabItem.first().addClass('is-active');
     servicesItem.first().addClass('is-active');
@@ -147,7 +149,19 @@ $(function(){
         $(".services-item:nth-child("+nthChild+")").addClass('is-active');
       }
     });
-  };
+
+
+    mobileToggle.on('click', function(e){
+      e.preventDefault();
+      $(this).next().slideToggle();
+      // if (!$(this).hasClass('is-active')) {
+      //   tabItem.removeClass('is-active');
+      //   $(this).addClass('is-active');
+      //   $(".services-item").removeClass('is-active');
+      //   $(".services-item:nth-child("+nthChild+")").addClass('is-active');
+      // }
+    });
+  }
 
   projectsFilters = function() {
     var filter = $('.project-filters a');
@@ -164,7 +178,7 @@ $(function(){
       projectGridItem.hide();
       $('.project-grid--item[data-categories=' + fitlerCategory + ']').show();
     });
-  };
+  }
 
   $('.project-slider').bxSlider({
     nextText: '<svg class="icon-prev project-slider--icon"><use xlink:href="#icon-prev"></use></svg>',

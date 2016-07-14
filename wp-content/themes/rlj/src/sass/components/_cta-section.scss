@@ -1,6 +1,10 @@
 
 .cta-section {
   @include cf;
+
+  @include bp-max-width($small) {
+    text-align: center;
+  }
 }
 
 .cta-section__red {

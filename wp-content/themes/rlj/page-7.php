@@ -28,19 +28,22 @@
       <div class="services-list">
         <?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
         <div class="services-item">
-          <div class="services-hero">
-            <?php
-              $image = get_field('services_main_image');
-              $size = 'secondary-hero';
-              $services_image = $image['sizes'][ $size ];
-            ?>
-            <img src="<?php echo $services_image; ?>">
-          </div>
-          <div class="services-info">
-            <div class="container">
-              <h2 class="section-title"><?php the_title(); ?></h2>
-              <div class="service-content body-content two-col-content">
-                <?php the_content(); ?>
+          <a href="#" class="sevices-mobile-toggle"><?php the_title(); ?></a>
+          <div class="services-mobile-container">
+            <div class="services-hero">
+              <?php
+                $image = get_field('services_main_image');
+                $size = 'secondary-hero';
+                $services_image = $image['sizes'][ $size ];
+              ?>
+              <img src="<?php echo $services_image; ?>">
+            </div>
+            <div class="services-info">
+              <div class="container">
+                <h2 class="section-title"><?php the_title(); ?></h2>
+                <div class="service-content body-content two-col-content">
+                  <?php the_content(); ?>
+                </div>
               </div>
             </div>
           </div>
