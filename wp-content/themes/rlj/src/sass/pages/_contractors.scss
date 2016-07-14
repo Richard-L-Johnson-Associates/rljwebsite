@@ -38,8 +38,13 @@
   color: $red;
   line-height: 1;
 
+  @include bp-min-width($medium) {
+    margin-bottom: 12px;
+  }
+
   @include bp-min-width($xxlarge) {
     @include font-size(35px);
+    margin-bottom: $base;
   }
 }
 

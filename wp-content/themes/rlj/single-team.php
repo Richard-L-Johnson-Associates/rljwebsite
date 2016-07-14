@@ -22,7 +22,9 @@
           <div class="member-bio">
             <?php the_content(); ?>
           </div>
-          <p class="member-back-link back-link"><a href="/about">Back to About Us</a></p>
+          <p class="member-back-link back-link">
+            <a href="/about">&#60; Back to About Us</a>
+          </p>
         </div>
       </div>
 

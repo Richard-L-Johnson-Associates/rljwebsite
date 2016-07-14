@@ -36,7 +36,7 @@
               <p class="plan-description"><?php the_sub_field('contractors_plan_description'); ?></p>
               <?php $file = get_sub_field('contractors_plan_file'); ?>
               <p class="plan-file-link">
-                <a href="<?php echo $file['url']; ?>">View Project Plans</a>
+                <a href="<?php echo $file['url']; ?>">View Project Plans &#62;</a>
               </p>
             </div>
 

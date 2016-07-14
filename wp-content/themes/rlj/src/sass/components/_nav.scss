@@ -8,7 +8,7 @@
   }
 
   @include bp-min-width($large) {
-    @include vertical-center(absolute);
+    @include vertical-center;
     right: 2%;
   }
 }
@@ -95,7 +95,11 @@
 .main-nav .current-menu-item:before {
   @include bp-min-width($large) {
     @include down-triangle(10px, $red);
-    @include horizontal-center(absolute);
+    @include horizontal-center;
+    top: -27px;
+  }
+
+  @include bp-min-width($xxlarge) {
     top: -43px;
   }
 }

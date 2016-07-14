@@ -2,10 +2,16 @@
 .tabs {
   padding: $base 0;
   text-align: center;
+
+  @include bp-min-width($xlarge) {
+    padding-top: $base*1.5;
+    padding-bottom: $base*1.5;
+  }
 }
 
 .tabs--item {
   @include font-size(16px);
+  position: relative;
   display: inline-block;
   margin: 0 20px;
   color: #000;
@@ -18,4 +24,16 @@
 
 .tabs--item.is-active {
   color: $red;
+}
+
+.tabs--item.is-active:before {
+  @include bp-min-width($large) {
+    @include down-triangle(10px, $red);
+    @include horizontal-center;
+    top: -24px;
+  }
+
+  @include bp-min-width($xlarge) {
+    top: -36px;
+  }
 }

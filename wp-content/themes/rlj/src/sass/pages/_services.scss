@@ -24,6 +24,7 @@
 }
 
 .sevices-mobile-toggle {
+  position: relative;
   display: block;
   padding: 20px;
   color: #000;
@@ -36,6 +37,12 @@
   &.is-active {
     color: $red;
   }
+}
+
+.sevices-mobile-toggle:after {
+  @include down-triangle(6px, $red);
+  @include vertical-center;
+  right: 20px;
 }
 
 .services-mobile-container {

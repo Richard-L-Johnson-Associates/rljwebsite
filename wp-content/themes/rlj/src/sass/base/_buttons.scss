@@ -114,7 +114,7 @@ button {
   @include font-size(16px);
   padding-top: $base;
 
-  @include bp-min-width($medium) {
+  @include bp-min-width($xxlarge) {
     @include font-size(20px);
   }
 }
@@ -122,4 +122,14 @@ button {
 .back-link a {
   color: $grey;
   text-transform: uppercase;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.back-link-icon {
+  width: 12px;
+  height: 22px;
+  fill: $grey;
 }

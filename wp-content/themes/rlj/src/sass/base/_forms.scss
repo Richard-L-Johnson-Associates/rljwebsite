@@ -131,6 +131,7 @@ textarea {
 }
 
 .frm_checkbox label {
+  @include line-height(24px);
   padding-left: 40px;
   margin-bottom: 0;
   cursor: pointer;
@@ -163,13 +164,22 @@ textarea {
   content: '';
   transform: rotate(-45deg);
   position: absolute;
-  top: 9px;
-  left: 8px;
+  top: 8px;
+  left: 7px;
   z-index: 10;
-  width: 16px;
-  height: 7px;
-  border-bottom: 5px solid $red;
-  border-left: 5px solid $red;
+  width: 11px;
+  height: 4px;
+  border-bottom: 3px solid $red;
+  border-left: 3px solid $red;
+
+  @include bp-min-width($large) {
+    top: 9px;
+    left: 8px;
+    width: 16px;
+    height: 7px;
+    border-bottom: 5px solid $red;
+    border-left: 5px solid $red;
+  }
 }
 
 

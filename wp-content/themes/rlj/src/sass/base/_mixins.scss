@@ -40,15 +40,15 @@
 
 
 // CENTER ALIGN
-@mixin vertical-center($position) {
+@mixin vertical-center {
   transform: translateY(-50%);
-  position: $position;
+  position: absolute;
   top: 50%;
 }
 
-@mixin horizontal-center($position) {
+@mixin horizontal-center {
   transform: translateX(-50%);
-  position: $position;
+  position: absolute;
   left: 50%;
 }
 

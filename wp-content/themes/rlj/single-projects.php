@@ -44,7 +44,7 @@
         <div class="project-content body-content two-col-content">
           <?php the_content(); ?>
         </div>
-        <p class="project-back-link back-link"><a href="/projects">Back to Projects</a></p>
+        <p class="project-back-link back-link"><a href="/projects">&#60; Back to Projects</a></p>
       </div>
     </div>
 
