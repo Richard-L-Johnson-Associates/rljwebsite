@@ -9,9 +9,13 @@
 }
 
 .footer p {
-  @include font-size(15px);
+  @include font-size(13px);
   @include line-height(17px);
   color: $grey;
+
+  @include bp-min-width($medium) {
+    @include font-size(15px);
+  }
 }
 
 .footer p:first-child {

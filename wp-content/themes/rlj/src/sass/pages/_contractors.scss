@@ -27,7 +27,7 @@
   color: $red;
   text-transform: uppercase;
 
-  @include bp-min-width($medium) {
+  @include bp-min-width($xxlarge) {
     @include font-size(40px);
   }
 }
@@ -38,14 +38,18 @@
   color: $red;
   line-height: 1;
 
-  @include bp-min-width($medium) {
+  @include bp-min-width($xxlarge) {
     @include font-size(35px);
   }
 }
 
 .plan-file-link {
   @include font-size(20px);
-  text-transform: uppercase
+  text-transform: uppercase;
+
+  @include bp-min-width($xxlarge) {
+    @include font-size(35px);
+  }
 }
 
 .plan-file-link a {

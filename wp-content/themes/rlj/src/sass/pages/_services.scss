@@ -32,6 +32,10 @@
   @include bp-min-width($small) {
     display: none;
   }
+
+  &.is-active {
+    color: $red;
+  }
 }
 
 .services-mobile-container {

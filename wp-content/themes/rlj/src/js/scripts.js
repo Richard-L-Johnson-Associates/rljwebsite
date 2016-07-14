@@ -55,12 +55,7 @@ $(function(){
     mobileToggle.on('click', function(e){
       e.preventDefault();
       $(this).next().slideToggle();
-      // if (!$(this).hasClass('is-active')) {
-      //   tabItem.removeClass('is-active');
-      //   $(this).addClass('is-active');
-      //   $(".services-item").removeClass('is-active');
-      //   $(".services-item:nth-child("+nthChild+")").addClass('is-active');
-      // }
+      $(this).toggleClass('is-active');
     });
   }
 
