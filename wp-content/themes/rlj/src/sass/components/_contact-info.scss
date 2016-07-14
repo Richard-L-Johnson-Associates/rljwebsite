@@ -6,13 +6,15 @@
 .contact-info--col {
   text-align: center;
 
-  @include bp-max-width($medium) {
-    margin-bottom: $base;
-  }
-
   @include bp-min-width($medium) {
     float: left;
     width: 33.333%;
+  }
+}
+
+.contact-info--col:not(:last-child) {
+  @include bp-max-width($medium) {
+    margin-bottom: $base;
   }
 }
 

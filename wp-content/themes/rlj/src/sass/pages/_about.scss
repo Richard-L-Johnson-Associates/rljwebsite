@@ -1,13 +1,21 @@
 
+.team .container {
+  padding-top: 0;
+}
+
+.team-grid {
+  @include bp-min-width($medium) {
+    margin: 0 -20px;
+  }
+}
+
 .team-grid--item {
-  position: relative;
-  display: block;
   text-align: center;
 
   @include bp-min-width($medium) {
+    float: left;
     width: 33.333%;
-    overflow: hidden;
-    border-radius: 50%;
+    padding: 0 20px;
   }
 
   @include bp-min-width($xlarge) {
@@ -18,6 +26,16 @@
 .team-grid--item:not(:last-child) {
   @include bp-max-width($medium) {
     margin-bottom: $base*1.5;
+  }
+}
+
+.team-grid--link {
+  position: relative;
+  display: block;
+
+  @include bp-min-width($medium) {
+    overflow: hidden;
+    border-radius: 50%;
   }
 }
 
@@ -65,8 +83,19 @@
 }
 
 
+/*** Bio Page ******/
+
 .member-profile-image {
-  width: 30%;
+  @include bp-max-width($medium) {
+    overflow: hidden;
+    max-width: 320px;
+    margin: 0 auto $base;
+    border-radius: 50%;
+  }
+
+  @include bp-min-width($medium) {
+    width: 30%;
+  }
 }
 
 .member-profile-image img {
@@ -74,32 +103,53 @@
 }
 
 .member-info {
-  width: 70%;
-  padding-left: 6%;
-  vertical-align: middle;
+  @include bp-min-width($medium) {
+    width: 70%;
+    padding-left: 6%;
+    vertical-align: middle;
+  }
 }
 
 .member-name {
-  @include bp-min-width($large) {
+  @include font-size(18px);
+  margin-bottom: 4px;
+  color: $red;
+  text-transform: uppercase;
+
+  @include bp-min-width($medium) {
+    @include font-size(30px);
+  }
+
+  @include bp-min-width($xxlarge) {
     @include font-size(40px);
-    margin-bottom: 4px;
-    color: $red;
-    text-transform: uppercase;
   }
 }
 
 .member-title {
-  @include bp-min-width($large) {
-    @include font-size(35px);
+  @include font-size(15px);
+  margin-bottom: 12px;
+  color: $red;
+
+  @include bp-min-width($medium) {
     margin-bottom: $base;
-    color: $red;
+  }
+
+  @include bp-min-width($xxlarge) {
+    @include font-size(35px);
   }
 }
 
 .member-bio p {
+  @include font-size(16px);
+  @include line-height(22px);
   font-family: $family-sans-body;
 
-  @include bp-min-width($large) {
+  @include bp-min-width($xxlarge) {
+    @include font-size(18px);
+    @include line-height(24px);
+  }
+
+  @include bp-min-width($xxlarge) {
     @include font-size(30px);
     @include line-height(38px);
   }

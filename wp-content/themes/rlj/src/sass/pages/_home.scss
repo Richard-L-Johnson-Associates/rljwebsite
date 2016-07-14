@@ -12,6 +12,7 @@
   right: 0;
   z-index: 10;
   width: 100%;
+  border-bottom: none;
   background: transparent;
 
   @include bp-min-width($medium) {
@@ -22,6 +23,7 @@
 
 .home .js-bg-white {
   background: #fff;
+  border-bottom: 1px solid $lt-grey;
 }
 
 .home .header .white-logo {

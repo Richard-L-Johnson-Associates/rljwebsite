@@ -1,11 +1,21 @@
 
 .footer {
-  padding: $base*1.5 2%;
+  padding: $base 20px;
   background-color: #fff;
+
+  @include bp-min-width($medium) {
+    padding: $base*1.5 2%;
+  }
 }
 
 .footer p {
   @include font-size(15px);
   @include line-height(17px);
   color: $grey;
+}
+
+.footer p:first-child {
+  @include bp-max-width($small) {
+    margin-bottom: 12px;
+  }
 }

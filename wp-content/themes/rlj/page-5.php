@@ -30,21 +30,23 @@
           $args = array( 'post_type' => 'team', 'posts_per_page' => -1 );
           $myposts = get_posts( $args );
           foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-            <a href="<?php echo get_permalink(); ?>" class="team-grid--item">
-              <?php
-                $image = get_field('team_profile_image');
-                $size = 'team-profile-image';
-                $thumb = $image['sizes'][ $size ];
-              ?>
-              <div class="team-grid--thumb">
-                <img src="<?php echo $thumb; ?>">
-              </div>
-              <div class="red-overlay"></div>
-              <div class="team-grid--member-info">
-                <p class="team-grid--member-name"><?php the_title(); ?></p>
-                <p class="team-grid--member-title"><?php the_field('team_member_title'); ?></p>
-              </div>
-            </a>
+            <div class="team-grid--item">
+              <a href="<?php echo get_permalink(); ?>" class="team-grid--link">
+                <?php
+                  $image = get_field('team_profile_image');
+                  $size = 'team-profile-image';
+                  $thumb = $image['sizes'][ $size ];
+                ?>
+                <div class="team-grid--thumb">
+                  <img src="<?php echo $thumb; ?>">
+                </div>
+                <div class="red-overlay"></div>
+                <div class="team-grid--member-info">
+                  <p class="team-grid--member-name"><?php the_title(); ?></p>
+                  <p class="team-grid--member-title"><?php the_field('team_member_title'); ?></p>
+                </div>
+              </a>
+            </div>
           <?php endforeach;
           wp_reset_postdata();?>
         </div>

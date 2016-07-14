@@ -32,8 +32,7 @@ body:not(.home) .site-container {
   padding: $base*1.5 20px;
 
   @include bp-min-width($medium) {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: $base*2 5%;
   }
 
   @include bp-min-width($xxlarge) {

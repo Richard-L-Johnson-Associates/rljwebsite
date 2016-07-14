@@ -20,16 +20,29 @@
 .project-slider--icon {
   position: absolute;
   top: 50%;
+  width: 24px;
+  height: 43px;
   margin-top: -28px;
   fill: #fff;
-  width: 30px;
-  height: 56px;
+
+  @include bp-min-width($small) {
+    width: 30px;
+    height: 56px;
+  }
 }
 
 .icon-prev {
-  left: 30px;
+  left: 20px;
+
+  @include bp-min-width($medium) {
+    left: 30px;
+  }
 }
 
 .icon-next {
-  right: 30px;
+  right: 20px;
+
+  @include bp-min-width($medium) {
+    right: 30px;
+  }
 }

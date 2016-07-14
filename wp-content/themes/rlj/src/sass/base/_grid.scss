@@ -1,11 +1,15 @@
 $pad: 18px;
 
 .table-grid {
-  display: table;
+  @include bp-min-width($medium) {
+    display: table;
+  }
 }
 
 .table-col {
-  display: table-cell;
+  @include bp-min-width($medium) {
+    display: table-cell;
+  }
 }
 
 .grid {
