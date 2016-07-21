@@ -16,6 +16,12 @@
   }
 }
 
+.admin-bar .header {
+  @include bp-min-width($medium) {
+    top: 31px;
+  }
+}
+
 .header-logo {
   position: relative;
   float: left;

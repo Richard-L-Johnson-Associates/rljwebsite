@@ -21,6 +21,12 @@
   }
 }
 
+.admin-bar.home .header {
+  @include bp-min-width($medium) {
+    top: 31px;
+  }
+}
+
 .home .js-bg-white {
   background: #fff;
   border-bottom: 1px solid $lt-grey;
