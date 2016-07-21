@@ -16,6 +16,7 @@
     <section class="projects">
 
       <div class="tabs project-filters">
+        <a href="#" class="tabs--item is-active" data-category="all">All</a>
       <?php
       $terms = get_terms( 'project-category' );
       if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){

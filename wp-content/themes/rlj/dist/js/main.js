@@ -170,8 +170,12 @@ $(function(){
 
       filter.removeClass('is-active');
       $(this).addClass('is-active');
-      projectGridItem.hide();
-      $('.project-grid--item[data-categories=' + fitlerCategory + ']').show();
+      if (fitlerCategory!="all") {
+        projectGridItem.hide();
+        $('.project-grid--item[data-categories=' + fitlerCategory + ']').show();
+      } else {
+        projectGridItem.show();
+      }
     });
   }
 

@@ -2,3 +2,17 @@
 .project-hero img {
   width: 100%;
 }
+
+.project-filters .tabs--item {
+  @include bp-max-width($large) {
+    padding: 6px 20px 6px 0;
+  }
+}
+
+.project-filters .tabs--item:after {
+  @include bp-max-width($large) {
+    @include down-triangle(6px, $red);
+    @include vertical-center;
+    right: 0;
+  }
+}

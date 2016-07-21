@@ -1,9 +1,13 @@
 
 .tabs {
-  padding: $base 0;
+  padding: 12px 0;
   text-align: center;
 
-  @include bp-min-width($xlarge) {
+  @include bp-min-width($small) {
+    padding: $base 0;
+  }
+
+  @include bp-min-width($large) {
     padding-top: $base*1.5;
     padding-bottom: $base*1.5;
   }
@@ -13,9 +17,13 @@
   @include font-size(16px);
   position: relative;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 16px;
   color: #000;
   text-transform: uppercase;
+
+  @include bp-min-width($small) {
+    margin: 0 20px;
+  }
 
   @include bp-min-width($xlarge) {
     @include font-size(20px);
