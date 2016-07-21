@@ -55,11 +55,6 @@
   @include bp-min-width($large) {
     text-align: left;
   }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(30px);
-    @include line-height(38px);
-  }
 }
 
 .contact-info--content a {

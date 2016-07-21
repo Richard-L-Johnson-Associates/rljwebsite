@@ -40,10 +40,6 @@ em {
   @include bp-min-width($medium) {
     @include font-size(30px);
   }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(50px);
-  }
 }
 
 .body-content p,
@@ -53,11 +49,6 @@ em {
   @include line-height(24px);
   margin-bottom: 1em;
   font-family: $family-sans-body;
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(30px);
-    @include line-height(38px);
-  }
 
   &:last-child {
     margin-bottom: 0;

@@ -27,11 +27,6 @@
   @include bp-min-width($medium) {
     padding: $base*10 5%;
   }
-
-  @include bp-min-width($xxlarge) {
-    padding-top: $base*14;
-    padding-bottom: $base*14;
-  }
 }
 
 .hero--title {
@@ -42,10 +37,5 @@
   @include bp-min-width($medium) {
     @include font-size(38px);
     @include line-height(47px);
-  }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(60px);
-    @include line-height(73px);
   }
 }

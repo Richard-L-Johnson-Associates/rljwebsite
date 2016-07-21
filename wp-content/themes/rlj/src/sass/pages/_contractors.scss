@@ -26,10 +26,6 @@
   margin-bottom: 4px;
   color: $red;
   text-transform: uppercase;
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(40px);
-  }
 }
 
 .plan-description {
@@ -41,23 +37,13 @@
   @include bp-min-width($medium) {
     margin-bottom: 12px;
   }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(35px);
-    margin-bottom: $base;
-  }
 }
 
 .plan-file-link {
   @include font-size(20px);
   text-transform: uppercase;
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(35px);
-  }
 }
 
 .plan-file-link a {
   color: $grey;
 }
-

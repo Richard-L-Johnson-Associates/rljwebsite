@@ -12,10 +12,6 @@
   @include bp-min-width($medium) {
     padding-right: 10px;
   }
-
-  @include bp-min-width($xxlarge) {
-    padding-right: 20px;
-  }
 }
 
 .page-id-13 .form-item--last-name,
@@ -23,11 +19,6 @@
   @include bp-min-width($medium) {
     padding-top: 34px;
     padding-left: 10px;
-  }
-
-  @include bp-min-width($xxlarge) {
-    padding-top: 59px;
-    padding-left: 20px;
   }
 }
 
@@ -42,4 +33,3 @@
     clear: left;
   }
 }
-

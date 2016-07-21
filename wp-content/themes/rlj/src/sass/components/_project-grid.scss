@@ -44,11 +44,6 @@
   @include font-size(20px);
   @include line-height(24px);
   margin-bottom: 12px;
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(35px);
-    @include line-height(43px);
-  }
 }
 
 .project-grid--title:after {

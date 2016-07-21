@@ -6,9 +6,9 @@ body {
 .site-container {
   @include cf;
 
-  @include bp-min-width($xxlarge) {
+  @include bp-min-width($xlarge) {
     position: relative;
-    max-width: 1920px;
+    max-width: 1640px;
     margin: 0 auto;
   }
 }
@@ -16,10 +16,6 @@ body {
 body:not(.home) .site-container {
   @include bp-min-width($medium) {
     padding-top: 78px;
-  }
-
-  @include bp-min-width($xxlarge) {
-    padding-top: 110px;
   }
 }
 
@@ -33,11 +29,6 @@ body:not(.home) .site-container {
 
   @include bp-min-width($medium) {
     padding: $base*2 5%;
-  }
-
-  @include bp-min-width($xxlarge) {
-    padding-top: $base*3;
-    padding-bottom: $base*3;
   }
 }
 

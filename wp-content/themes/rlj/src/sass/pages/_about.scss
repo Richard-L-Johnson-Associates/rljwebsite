@@ -123,10 +123,6 @@
   @include bp-min-width($medium) {
     @include font-size(30px);
   }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(40px);
-  }
 }
 
 .member-title {
@@ -137,10 +133,6 @@
   @include bp-min-width($medium) {
     margin-bottom: $base;
   }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(35px);
-  }
 }
 
 .member-bio p {
@@ -148,14 +140,9 @@
   @include line-height(22px);
   font-family: $family-sans-body;
 
-  @include bp-min-width($xxlarge) {
+  @include bp-min-width($large) {
     @include font-size(18px);
     @include line-height(24px);
-  }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(30px);
-    @include line-height(38px);
   }
 }
 
@@ -166,4 +153,3 @@
     margin-bottom: $base;
   }
 }
-

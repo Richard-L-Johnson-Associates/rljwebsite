@@ -29,11 +29,6 @@ label {
     @include font-size(22px);
     margin-bottom: 12px;
   }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(35px);
-    margin-bottom: $base;
-  }
 }
 
 .frm_description {
@@ -43,10 +38,6 @@ label {
   @include bp-min-width($xxlarge) {
     @include font-size(18px);
     padding-top: 4px;
-  }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(20px);
   }
 }
 
@@ -66,12 +57,6 @@ select {
   @include bp-min-width($medium) {
     @include font-size(22px);
     height: 66px;
-    padding: 0 20px;
-  }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(35px);
-    height: 96px;
     padding: 0 20px;
   }
 }

@@ -69,12 +69,8 @@
   color: #000;
   text-transform: uppercase;
 
-  @include bp-min-max($large, $xxlarge) {
+  @include bp-min-width($large) {
     @include font-size(15px);
-  }
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(20px);
   }
 }
 
@@ -97,10 +93,6 @@
     @include down-triangle(10px, $red);
     @include horizontal-center;
     top: -27px;
-  }
-
-  @include bp-min-width($xxlarge) {
-    top: -43px;
   }
 }
 

@@ -16,11 +16,6 @@
     padding-top: $base*4;
     padding-bottom: $base*4;
   }
-
-  @include bp-min-width($xxlarge) {
-    padding-top: $base*6;
-    padding-bottom: $base*6;
-  }
 }
 
 .cta-section--content {
@@ -32,20 +27,11 @@
     float: left;
     width: calc(100% - 400px);
   }
-
-  @include bp-min-width($xxlarge) {
-    width: calc(100% - 560px);
-  }
 }
 
 .cta-section--content p {
   @include font-size(18px);
   @include line-height(24px);
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(30px);
-    @include line-height(38px);
-  }
 }
 
 .cta-section__red p {
@@ -57,9 +43,5 @@
     float: left;
     width: 400px;
     text-align: right;
-  }
-
-  @include bp-min-width($xxlarge) {
-    width: 560px;
   }
 }

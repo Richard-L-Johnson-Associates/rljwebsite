@@ -80,28 +80,23 @@
     padding-top: $base*14;
     padding-bottom: $base*12;
   }
-
-  @include bp-min-width($xxlarge) {
-    padding-top: $base*19;
-    padding-bottom: $base*15;
-  }
 }
 
 .home-hero--title {
   @include font-size(25px);
-  @inlcude line-height(30px);
+  @include line-height(30px);
   margin-bottom: 6px;
   text-transform: uppercase;
 
   @include bp-min-width($medium) {
     @include font-size(60px);
-    @inlcude line-height(80px);
+    @include line-height(80px);
     margin-bottom: 18px;
   }
 
   @include bp-min-width($xxlarge) {
     @include font-size(100px);
-    @inlcude line-height(122px);
+    @include line-height(122px);
     margin-bottom: $base;
   }
 }
@@ -147,20 +142,11 @@
     float: left;
     width: calc(100% - 400px);
   }
-
-  @include bp-min-width($xxlarge) {
-    width: calc(100% - 560px);
-  }
 }
 
 .home-intro--content p {
   @include font-size(18px);
   @include line-height(24px);
-
-  @include bp-min-width($xxlarge) {
-    @include font-size(30px);
-    @include line-height(38px);
-  }
 }
 
 .home-intro--cta {
@@ -168,9 +154,5 @@
     float: left;
     width: 400px;
     text-align: right;
-  }
-
-  @include bp-min-width($xxlarge) {
-    width: 560px;
   }
 }
