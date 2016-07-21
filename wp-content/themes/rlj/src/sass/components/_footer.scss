@@ -8,14 +8,18 @@
   }
 }
 
-.footer p {
-  @include font-size(13px);
-  @include line-height(17px);
+.footer a {
   color: $grey;
 
-  @include bp-min-width($medium) {
-    @include font-size(15px);
+  &:hover {
+    color: #000;
   }
+}
+
+.footer p {
+  @include font-size(12px);
+  @include line-height(17px);
+  color: $grey;
 }
 
 .footer p:first-child {

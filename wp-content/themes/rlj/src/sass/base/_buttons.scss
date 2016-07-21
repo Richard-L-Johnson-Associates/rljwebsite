@@ -21,18 +21,17 @@ a[href^="tel"]{
 /** Buttons ========**/
 
 @mixin btn {
-  @include font-size(18px);
   display: inline-block;
-  padding: 16px 24px;
+  padding: 12px 20px;
   border: 3px solid #000;
   color: #000;
   text-transform: uppercase;
   text-align: center;
 
   @include bp-min-width($large) {
-    @include font-size(22px);
+    @include font-size(18px);
     min-width: 324px;
-    padding: 24px 32px;
+    padding: 16px 24px;
     border: 5px solid #000;
   }
 }
