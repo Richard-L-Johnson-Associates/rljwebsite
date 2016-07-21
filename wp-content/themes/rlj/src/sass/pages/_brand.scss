@@ -80,6 +80,12 @@
   font-family: $family-sans-body;
 }
 
+.logo-downloads {
+  @include bp-max-width($medium) {
+    text-align: center;
+  }
+}
+
 .logo-downloads .body-content {
   margin-bottom: $base*2;
 }
@@ -93,11 +99,7 @@
 }
 
 .brand-logo-list--item {
-  margin-bottom: $base;
-
-  @include bp-min-width($medium) {
-    margin-bottom: $base*2;
-  }
+  margin-bottom: $base*2;
 }
 
 .logo-downloads .brand-subtitle {
@@ -113,6 +115,10 @@
   max-width: 320px;
   padding: 20px;
 
+  @include bp-max-width($medium) {
+    margin: 0 auto 12px;
+  }
+
   @include bp-min-width($large) {
     max-width: 400px;
     padding: 40px;
@@ -125,8 +131,10 @@
 }
 
 .brand-logo-list--download {
-  @include vertical-center;
-  right: 0;
+  @include bp-min-width($medium) {
+    @include vertical-center;
+    right: 0;
+  }
 }
 
 .brand-logo-grid--image {
@@ -156,6 +164,8 @@
 }
 
 .brand-logo-grid--download .btn {
-  width: 100%;
-  min-width: 0;
+  @include bp-min-width($medium) {
+    width: 100%;
+    min-width: 0;
+  }
 }
