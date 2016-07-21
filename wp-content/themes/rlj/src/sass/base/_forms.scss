@@ -26,7 +26,7 @@ label {
   line-height: 1;
 
   @include bp-min-width($medium) {
-    @include font-size(22px);
+    @include font-size(20px);
     margin-bottom: 12px;
   }
 }

@@ -1,4 +1,20 @@
 
-.error404 .body-content .btn {
-  color: #fff;
+.error-404-hero {
+  background-image: $hero-404;
+}
+
+.hero--title:first-child {
+  text-transform: uppercase;
+}
+
+.hero--title:nth-child(2) {
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base*2;
+  }
+}
+
+.hero--cta {
+  text-align: center;
 }

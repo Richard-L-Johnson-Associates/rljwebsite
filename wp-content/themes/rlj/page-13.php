@@ -26,32 +26,38 @@
       <div class="container">
         <div class="contact-info--col">
           <div class="contact-info--icon">
-            <svg class="icon-circle-phone">
-              <use xlink:href="#icon-circle-phone"></use>
-            </svg>
+            <a href="tel:<?php the_field('contact_phone', 13); ?>">
+              <svg class="icon-circle-phone">
+                <use xlink:href="#icon-circle-phone"></use>
+              </svg>
+            </a>
           </div>
           <div class="contact-info--content">
-            <?php the_field('contact_phone'); ?>
+            <a href="tel:<?php the_field('contact_phone', 13); ?>"><?php the_field('contact_phone', 13); ?></a>
           </div>
         </div>
         <div class="contact-info--col">
           <div class="contact-info--icon">
-            <svg class="icon-circle-email">
-              <use xlink:href="#icon-circle-email"></use>
-            </svg>
+            <a href="mailto:<?php the_field('contact_email', 13); ?>">
+              <svg class="icon-circle-email">
+                <use xlink:href="#icon-circle-email"></use>
+              </svg>
+            </a>
           </div>
           <div class="contact-info--content">
-            <?php the_field('contact_email'); ?>
+            <a href="mailto:<?php the_field('contact_email', 13); ?>"><?php the_field('contact_email', 13); ?></a>
           </div>
         </div>
         <div class="contact-info--col">
           <div class="contact-info--icon">
-            <svg class="icon-circle-location">
-              <use xlink:href="#icon-circle-location"></use>
-            </svg>
+            <a href="https://goo.gl/maps/BShDHjXzKiv">
+              <svg class="icon-circle-location">
+                <use xlink:href="#icon-circle-location"></use>
+              </svg>
+            </a>
           </div>
           <div class="contact-info--content">
-            <?php the_field('contact_address'); ?>
+            <a href="https://goo.gl/maps/BShDHjXzKiv"><?php the_field('contact_address', 13); ?></a>
           </div>
         </div>
       </div>

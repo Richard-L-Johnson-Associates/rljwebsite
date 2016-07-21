@@ -46,4 +46,8 @@
 
 .plan-file-link a {
   color: $grey;
+
+  &:hover {
+    color: #000;
+  }
 }

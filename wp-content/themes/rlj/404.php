@@ -1,23 +1,11 @@
 <?php get_header(); ?>
 
-<main class="main" role="main">
-  <div class="main-wrapper">
-
-    <div class="content-wrapper">
-
-      <section class="page-content">
-        <div class="body-content">
-          <h2>Whoops!</h2>
-          <p>Looks like you're lost your way. Head home and try again.</p>
-          <p><a href="/" class="btn btn__blue">Back Home</a></p>
-        </div>
-      </section>
-
-      <?php get_sidebar(); ?>
-
-    </div>
-
+<section class="hero error-404-hero">
+  <div class="hero-container">
+    <h1 class="hero--title">404 | Page Not Found</h1>
+    <h2 class="hero--title">Sorry this page does not exist.</h2>
+    <p class="hero--cta"><a href="/" class="btn btn__white-border">Head back home</a></p>
   </div>
-</main>
+</section>
 
 <?php get_footer(); ?>

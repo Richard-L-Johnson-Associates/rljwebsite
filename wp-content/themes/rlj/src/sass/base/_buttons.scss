@@ -57,7 +57,7 @@ a[href^="tel"]{
 }
 
 .btn__white-border {
-  background: $red;
+  background: transparent;
   border-color: #fff;
   color: #fff;
 
@@ -73,12 +73,11 @@ a[href^="tel"]{
 input[type="submit"],
 button {
   @include global-transition(0.1s);
-  @include font-size(20px);
   display: inline-block;
   outline: none;
   cursor: pointer;
   width: 100%;
-  padding: 16px 12px;
+  padding: 12px 20px;
   background: #fff;
   border: 5px solid #000;
   font-family: $family-sans;
@@ -87,9 +86,9 @@ button {
   text-align: center;
 
   @include bp-min-width($medium) {
-    @include font-size(22px);
-    min-width: 324px;
-    padding: 24px 32px;
+    @include font-size(18px);
+    max-width: 324px;
+    padding: 16px 24px;
     border: 5px solid #000;
   }
 }

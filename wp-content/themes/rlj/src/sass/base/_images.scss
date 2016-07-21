@@ -7,3 +7,7 @@
   left: 0;
   background: rgba($red, 0.7);
 }
+
+$img-url: '/wp-content/themes/rlj/dist/images/';
+
+$hero-404: url("#{$img-url}hero-404.jpg");
