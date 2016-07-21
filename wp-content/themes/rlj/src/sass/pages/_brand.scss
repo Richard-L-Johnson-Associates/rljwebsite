@@ -1,0 +1,161 @@
+
+.brand-hero {
+  background-image: $hero-404;
+}
+
+.brand-row:not(:last-child) {
+  margin-bottom: $base;
+  padding-bottom: $base;
+  border-bottom: 1px solid #000;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base*2;
+    padding-bottom: $base*2;
+  }
+}
+
+.brand-subtitle {
+  @include font-size(18px);
+  margin-bottom: 6px;
+  color: $red;
+}
+
+.typeface-guidelines p {
+  margin-bottom: 6px;
+}
+
+.typeface-guidelines .download-link {
+  @include font-size(18px);
+  font-family: $family-sans;
+  text-transform: uppercase;
+}
+
+.typeface-guidelines .download-link:not(:last-child) {
+  margin-bottom: $base*1.5;
+}
+
+.typeface-guidelines .download-link a {
+  color: $grey;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.brand-colors--item {
+  position: relative;
+  height: 100px;
+  padding-left: 140px;
+}
+
+.brand-colors--item:not(:last-child) {
+  margin-bottom: $base;
+}
+
+.color-swatch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.color-swatch__red {
+  background: $red;
+}
+
+.color-swatch__black {
+  background: #000;
+}
+
+.color-info {
+  float: left;
+}
+
+.color-info h3 {
+  text-transform: uppercase;
+}
+
+.color-info p {
+  font-family: $family-sans-body;
+}
+
+.logo-downloads .body-content {
+  margin-bottom: $base*2;
+}
+
+.brand-logo-list {
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base*4;
+  }
+}
+
+.brand-logo-list--item {
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base*2;
+  }
+}
+
+.logo-downloads .brand-subtitle {
+  margin-bottom: 12px;
+}
+
+.brand-logo-list--details {
+  position: relative;
+}
+
+.brand-logo-list--image {
+  border: 1px solid $dk-grey;
+  max-width: 320px;
+  padding: 20px;
+
+  @include bp-min-width($large) {
+    max-width: 400px;
+    padding: 40px;
+  }
+}
+
+.brand-logo-list--image__white,
+.brand-logo-grid--image__white {
+  background: #000;
+}
+
+.brand-logo-list--download {
+  @include vertical-center;
+  right: 0;
+}
+
+.brand-logo-grid--image {
+  position: relative;
+  margin-bottom: 12px;
+  padding-bottom: 320px;
+  border: 1px solid $dk-grey;
+
+  @include bp-max-width($medium) {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include bp-min-width($medium) {
+    padding-bottom: 100%;
+  }
+}
+
+.brand-logo-grid--image img {
+  @include absolute-center;
+  max-width: 50%;
+
+  @include bp-min-width($large) {
+    max-width: 40%;
+  }
+}
+
+.brand-logo-grid--download .btn {
+  width: 100%;
+  min-width: 0;
+}

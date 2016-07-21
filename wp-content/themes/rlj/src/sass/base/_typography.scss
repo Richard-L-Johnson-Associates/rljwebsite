@@ -68,6 +68,10 @@ em {
   list-style: decimal;
 }
 
+.body-content p .btn {
+  font-family: $family-sans;
+}
+
 .two-col-content {
   @include bp-min-width($large) {
     column-count: 2;

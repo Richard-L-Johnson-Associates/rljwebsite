@@ -1,126 +1,25 @@
-$pad: 18px;
-
-.table-grid {
-  @include bp-min-width($medium) {
-    display: table;
-  }
-}
-
-.table-col {
-  @include bp-min-width($medium) {
-    display: table-cell;
-  }
-}
 
 .grid {
   @include cf;
-}
-
-.col {
-  width: 100%;
-}
-
-.grid__md {
-  @include bp-min-width($medium) {
-    margin: 0 -18px;
-  }
-}
-
-.grid__md .col {
-  margin-bottom: $base;
 
   @include bp-min-width($medium) {
-    margin-bottom: 0;
+    margin: 0 -20px;
   }
 }
 
-.grid__md .col:last-of-type {
-  @include bp-max-width($medium) {
-    margin-bottom: 0;
-  }
-}
-
-/** Large Screens ======**/
-
-.col-3-4__lg {
-  @include bp-min-width($large) {
-    float: left;
-    width: 75%;
-    padding: 0 $pad;
-  }
-}
-
-.col-2-3__lg {
-  @include bp-min-width($large) {
-    float: left;
-    width: 66.66%;
-    padding: 0 $pad;
-  }
-}
-
-.col-1-2__lg {
-  @include bp-min-width($large) {
+.col-1-4 {
+  @include bp-min-width($medium) {
     float: left;
     width: 50%;
-    padding: 0 $pad;
-
-    &:nth-child(2n+1) {
-      clear: left;
-    }
+    padding: 0 20px;
   }
-}
 
-.col-1-3__lg {
-  @include bp-min-width($large) {
-    float: left;
-    width: 33.33%;
-    padding: 0 $pad;
-
-    &:nth-child(3n+1) {
-      clear: left;
-    }
+  @include bp-max-width($large) {
+    margin-bottom: $base*2;
   }
-}
 
-.col-1-4__lg {
   @include bp-min-width($large) {
     float: left;
     width: 25%;
-    padding: 0 $pad;
-  }
-}
-
-
-/** Medium Screens ======**/
-
-.col-1-2__md {
-  @include bp-min-max($medium, $large) {
-    float: left;
-    width: 50%;
-    padding: 0 $pad;
-
-    &:nth-child(2n+1) {
-      clear: left;
-    }
-  }
-}
-
-.col-1-3__md {
-  @include bp-min-width($medium) {
-    float: left;
-    width: 33.33%;
-    padding: 0 $pad;
-
-    &:nth-child(3n+1) {
-      clear: left;
-    }
-  }
-}
-
-.col-1-4__md {
-  @include bp-min-width($medium) {
-    float: left;
-    width: 50%;
-    padding: 0 $pad;
   }
 }
