@@ -1,6 +1,7 @@
 
 .cta-section {
   @include cf;
+  position: relative;
 
   @include bp-max-width($small) {
     text-align: center;
@@ -16,7 +17,6 @@
   padding-bottom: $base*2;
 
   @include bp-min-width($medium) {
-    position: relative;
     padding-top: $base*2.75;
     padding-bottom: $base*2.75;
   }
@@ -28,7 +28,6 @@
   }
 
   @include bp-min-width($large) {
-    float: left;
     width: calc(100% - 400px);
   }
 }
@@ -45,7 +44,6 @@
 .cta-section--button {
   @include bp-min-width($large) {
     @include vertical-center;
-    right: 0;
-    width: 400px;
+    right: 5%;
   }
 }

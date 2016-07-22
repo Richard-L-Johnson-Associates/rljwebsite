@@ -5,6 +5,12 @@
   border-bottom: 1px solid $grey;
 }
 
+.contractors-content .cta-section--button {
+  @include bp-min-width($large) {
+    right: 0;
+  }
+}
+
 .plan--item {
   @include bp-min-width($xlarge) {
     width: 50%;
