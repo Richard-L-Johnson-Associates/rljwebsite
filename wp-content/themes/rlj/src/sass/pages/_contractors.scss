@@ -18,8 +18,8 @@
 }
 
 .plan--item:not(:last-child) {
-  margin-bottom: $base*2;
-  padding-bottom: $base*2;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
   border-bottom: 1px solid $grey;
 
   @include bp-min-width($xlarge) {
@@ -28,25 +28,19 @@
 }
 
 .plan-title {
-  @include font-size(24px);
+  @include font-size(18px);
   margin-bottom: 4px;
   color: $red;
   text-transform: uppercase;
 }
 
 .plan-description {
-  @include font-size(20px);
   margin-bottom: 6px;
   color: $red;
   line-height: 1;
-
-  @include bp-min-width($medium) {
-    margin-bottom: 12px;
-  }
 }
 
 .plan-file-link {
-  @include font-size(20px);
   text-transform: uppercase;
 }
 
