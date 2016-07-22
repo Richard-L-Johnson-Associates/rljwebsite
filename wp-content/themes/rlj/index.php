@@ -12,10 +12,10 @@
   <section class="home-intro">
     <div class="container">
       <div class="home-intro--content">
-        <p>Working with our clients to provide them innovative design solutions for their specific needs is our service specialty. Our number one concern is that your final design and finished building project meet your specific needs.</p>
+        <p><?php the_field('home_intro_content'); ?></p>
       </div>
       <div class="home-intro--cta">
-        <p><a href="" class="btn">Discover our Process</a></p>
+        <p><a href="<?php the_field('home_intro_button_link'); ?>" class="btn"><?php the_field('home_intro_button_label'); ?></a></p>
       </div>
     </div>
   </section>

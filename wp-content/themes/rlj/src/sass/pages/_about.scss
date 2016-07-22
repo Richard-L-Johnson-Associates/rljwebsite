@@ -24,9 +24,7 @@
 }
 
 .team-grid--item:not(:last-child) {
-  @include bp-max-width($medium) {
-    margin-bottom: $base*1.5;
-  }
+  margin-bottom: 40px;
 }
 
 .team-grid--link {

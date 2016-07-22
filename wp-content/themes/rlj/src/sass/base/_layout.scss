@@ -5,12 +5,6 @@ body {
 
 .site-container {
   @include cf;
-
-  @include bp-min-width($xlarge) {
-    position: relative;
-    max-width: 1640px;
-    margin: 0 auto;
-  }
 }
 
 body:not(.home) .site-container {

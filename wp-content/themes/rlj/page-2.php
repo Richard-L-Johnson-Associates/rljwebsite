@@ -20,7 +20,7 @@
           <p><?php the_field('home_intro_content'); ?></p>
         </div>
         <div class="home-intro--cta">
-          <p><a href="" class="btn">Discover our Process</a></p>
+          <p><a href="<?php the_field('home_intro_button_link'); ?>" class="btn"><?php the_field('home_intro_button_label'); ?></a></p>
         </div>
       </div>
     </section>
