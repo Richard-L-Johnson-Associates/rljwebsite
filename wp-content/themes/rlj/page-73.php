@@ -50,14 +50,14 @@
         </div>
         <div class="contact-info--col">
           <div class="contact-info--icon">
-            <a href="https://goo.gl/maps/BShDHjXzKiv">
+            <a href="<?php the_field('contact_map_link', 13); ?>">
               <svg class="icon-circle-location">
                 <use xlink:href="#icon-circle-location"></use>
               </svg>
             </a>
           </div>
           <div class="contact-info--content">
-            <a href="https://goo.gl/maps/BShDHjXzKiv"><?php the_field('contact_address', 13); ?></a>
+            <a href="<?php the_field('contact_map_link', 13); ?>"><?php the_field('contact_address', 13); ?></a>
           </div>
         </div>
       </div>
