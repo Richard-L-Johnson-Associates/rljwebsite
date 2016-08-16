@@ -1,4 +1,16 @@
 
+.table-grid {
+  @include bp-min-width($medium) {
+    display: table;
+  }
+}
+
+.table-col {
+  @include bp-min-width($medium) {
+    display: table-cell;
+  }
+}
+
 .grid {
   @include cf;
 

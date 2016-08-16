@@ -92,7 +92,6 @@
     overflow: hidden;
     max-width: 320px;
     margin: 0 auto $base;
-    border-radius: 50%;
   }
 
   @include bp-min-width($medium) {
